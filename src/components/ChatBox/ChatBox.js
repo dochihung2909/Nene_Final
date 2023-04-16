@@ -5,6 +5,7 @@ import Message from './Message'
 import { useEffect, useRef, useState } from 'react'
 import { Input } from '@chakra-ui/react'
 import Button from '../Button'
+import Tippy from '@tippyjs/react'
 
 const cx = classNames.bind(styles)
 

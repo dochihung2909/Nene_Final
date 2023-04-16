@@ -6,15 +6,12 @@ import styles from './Test.module.scss'
 
 const cx = classNames.bind(styles)
 
-function Test({ title, minutes, questions }) {
+function Test({ thumb, title, minutes, questions }) {
     return (
         <Link to="/test" className={cx('wrapper')}>
             <div className={cx('header')}>
                 <div className={cx('image-test')}>
-                    <img
-                        src="https://images.dolenglish.vn/rs:auto:::0/w:1440/q:70/aHR0cHM6Ly9zdWlqbTljbG91b2JqLnZjZG4uY2xvdWQvUFVCTElDL01FRElBLzZmOGQyNjk2LTFlM2UtNGZkNi05OWYwLTNlNGJmZGU3YzEzMS5qcGc="
-                        alt="test"
-                    />
+                    <img src={thumb} alt="test" />
                 </div>
                 <div className={cx('header-title')}>
                     <h4>{title}</h4>
@@ -36,10 +33,10 @@ function Test({ title, minutes, questions }) {
 
                     <div>
                         <div>
-                            <i class="fa-regular fa-circle-question"></i> {questions} Questions
+                            <i class="fa-regular fa-circle-question"></i> Basics
                         </div>
                         <div>
-                            <i class="fa-regular fa-clock"></i> {minutes} hour
+                            <i class="fa-regular fa-clock"></i> 30 online
                         </div>
                     </div>
                 </div>

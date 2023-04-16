@@ -1,5 +1,8 @@
 .wrapper {
-    background-color: rgb(255, 249, 241);
+}
+
+.header-wrap {
+    background-color: rgb(255, 223, 181);
 }
 
 .header {
@@ -25,6 +28,11 @@
     }
 }
 
+.body {
+    margin-top: 64px;
+    background-color: var(--white);
+}
+
 .badge {
     position: absolute;
     z-index: 0;
@@ -46,5 +54,5 @@
 }
 
 .grammar {
-    margin-bottom: 24px;
+    margin: 24px 0;
 }

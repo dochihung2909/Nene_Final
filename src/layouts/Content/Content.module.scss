@@ -13,8 +13,9 @@
     margin-top: 24px;
     width: 100%;
 
-    & > img {
+    & img {
         width: 100%;
+        border-radius: 16px;
     }
 }
 
@@ -30,6 +31,33 @@
     .test {
         display: flex;
         gap: 20px;
+        width: 100%;
+        overflow: hidden;
+        overflow-x: auto;
+        padding: 12px 4px;
+
+        &::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: var(--white);
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 999999px;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        & > a {
+            flex: 0 0 25%;
+        }
     }
 }
 
@@ -115,6 +143,7 @@
     justify-content: center;
     bottom: 5%;
     right: 5%;
+    z-index: 100;
     border-radius: 9999999px;
     background-color: var(--P-color);
     box-shadow: rgba(0, 0, 0, 0.04) 0px 24px 32px, rgba(0, 0, 0, 0.04) 0px 16px 24px, rgba(0, 0, 0, 0.04) 0px 4px 8px,
@@ -125,6 +154,10 @@
         animation: shake 0.8s linear infinite forwards;
         color: var(--white);
     }
+}
+
+.tippy {
+    display: flex;
 }
 
 @keyframes shake {
@@ -176,6 +209,41 @@
     background-color: var(--P-color) !important;
 }
 
+.grammar {
+    margin: 24px 0;
+}
+
+.tippy {
+    background-color: var(--white);
+    padding: 8px;
+    border-radius: 9999px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 24px 32px, rgba(0, 0, 0, 0.04) 0px 16px 24px, rgba(0, 0, 0, 0.04) 0px 4px 8px,
+        rgba(0, 0, 0, 0.04) 0px 0px 1px;
+    background-color: var(--P-color);
+    color: var(--white);
+    animation: showIn 0.5s linear;
+    overflow: hidden;
+}
+
+@keyframes showIn {
+    from {
+        transform: translateX(70%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@media (max-width: 960px) {
+    .test-wrapper {
+        .test {
+            & > a {
+                flex: 0 0 50%;
+            }
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .col-0 {
         display: none;
@@ -190,14 +258,16 @@
         display: none;
     }
 
-    .test {
-        width: 100%;
-        overflow: hidden;
-        overflow-x: auto;
-        padding: 12px 0;
+    .test-wrapper {
+        .test {
+            width: 100%;
+            overflow: hidden;
+            overflow-x: auto;
+            padding: 12px 0;
 
-        & > a {
-            flex: 0 0 80%;
+            & > a {
+                flex: 0 0 80%;
+            }
         }
     }
 

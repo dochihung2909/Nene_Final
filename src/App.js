@@ -56,7 +56,9 @@ function App() {
                     path="/study/grammar"
                     element={
                         <DefaultLayout>
-                            <Grammar></Grammar>
+                            <Content>
+                                <Grammar></Grammar>
+                            </Content>
                         </DefaultLayout>
                     }
                 ></Route>
