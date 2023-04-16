@@ -27,30 +27,39 @@ function Content({ profile, children }) {
         }
     }, [])
 
+    const [selected, setSelected] = useState(1)
+
     return (
         <div className={cx('wrapper')}>
             <div className={cx('row')}>
-                <div className={cx('col-0', 'col-md-1 col-lg-1')}>
+                <div className={cx('menu-left', 'col-0', 'col-md-1 col-lg-1')}>
                     <div className={cx('menu-wrapper')}>
                         <div className={cx('menu-item-wrapper')}>
-                            <Link to="/" className={cx('menu-item', { selected: window.location.pathname === '/' })}>
+                            <Link
+                                onClick={(e) => setSelected(1)}
+                                to="/"
+                                className={cx('menu-item', { selected: selected === 1 })}
+                            >
                                 <i className="fa-solid fa-house"></i> <h4>Home</h4>
                             </Link>
                             <Link
+                                onClick={(e) => setSelected(2)}
                                 to="/test"
-                                className={cx('menu-item', { selected: window.location.pathname === '/test' })}
+                                className={cx('menu-item', { selected: selected === 2 })}
                             >
                                 <i class="fa-solid fa-clipboard"></i> <h4>Test</h4>
                             </Link>
                             <Link
+                                onClick={(e) => setSelected(3)}
                                 to="/"
-                                className={cx('menu-item', { selected: window.location.pathname === '/quiz' })}
+                                className={cx('menu-item', { selected: selected === 3 })}
                             >
                                 <i class="fa-solid fa-circle-question"></i> <h4>Quiz</h4>
                             </Link>
                             <Link
+                                onClick={(e) => setSelected(4)}
                                 to="/study"
-                                className={cx('menu-item', { selected: window.location.pathname === '/study' })}
+                                className={cx('menu-item', { selected: selected === 4 })}
                             >
                                 <i class="fa-solid fa-book"></i> <h4>Study</h4>
                             </Link>
