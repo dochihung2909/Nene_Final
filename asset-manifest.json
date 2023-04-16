@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Nene_Final/static/css/main.f9abf996.css",
+    "main.js": "/Nene_Final/static/js/main.e70e5a25.js",
+    "static/js/787.e831939a.chunk.js": "/Nene_Final/static/js/787.e831939a.chunk.js",
+    "index.html": "/Nene_Final/index.html",
+    "main.f9abf996.css.map": "/Nene_Final/static/css/main.f9abf996.css.map",
+    "main.e70e5a25.js.map": "/Nene_Final/static/js/main.e70e5a25.js.map",
+    "787.e831939a.chunk.js.map": "/Nene_Final/static/js/787.e831939a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f9abf996.css",
+    "static/js/main.e70e5a25.js"
+  ]
+}
