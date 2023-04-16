@@ -4,7 +4,7 @@ import Exam from './pages/Exam/Exam'
 import Quiz from './pages/Quiz/Quiz'
 import Content from './layouts/Content'
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import Result from './pages/Result/Result'
 import Grammar from './pages/Grammar/Grammar'
 import Study from './pages/Study/Study'
