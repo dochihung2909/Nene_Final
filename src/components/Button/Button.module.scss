@@ -1,0 +1,25 @@
+.wrapper {
+    font-size: 1.6rem;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
+
+.title {
+    margin: 0;
+    display: flex;
+}
+
+.title + .icon {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.icon {
+    display: flex;
+    margin-top: 2px;
+}

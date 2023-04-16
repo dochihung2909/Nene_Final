@@ -1,0 +1,32 @@
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+
+    &:hover {
+        .thumb {
+            & > img {
+                transition: all 0.2s ease;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.thumb {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 20px;
+
+    & > img {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+    }
+}
+
+.title {
+    font-size: 2rem;
+    padding: 0 8px;
+}
