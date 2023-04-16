@@ -5,14 +5,20 @@ import classNames from 'classnames/bind'
 import ReadingControl from '~/components/Reading/ReadingControl'
 import Header from './Header'
 import { useState } from 'react'
+import Button from '~/components/Button'
 
 const cx = classNames.bind(styles)
 
 function Test() {
     const [answer, setAnswer] = useState([])
+    const [showMbAns, setShowMbAns] = useState(false)
 
     const handleSubmit = () => {
         localStorage.setItem('answer', JSON.stringify(answer))
+    }
+
+    const handleShowAns = () => {
+        setShowMbAns(!showMbAns)
     }
 
     return (
@@ -20,10 +26,10 @@ function Test() {
             <Header></Header>
             <div className={cx('wrapper')}>
                 <div className={cx('row', 'content')}>
-                    <div className="col-lg-5 col-12 p-0">
+                    <div className={cx('col-lg-5 col-12 p-0', { show: !showMbAns })}>
                         <Reading></Reading>
                     </div>
-                    <div className="col-lg-7 col-12 p-0">
+                    <div className={cx('col-lg-7 col-12 p-0', { show: showMbAns })}>
                         <ReadingTest setAnswer={setAnswer}></ReadingTest>
                     </div>
                 </div>
@@ -32,6 +38,14 @@ function Test() {
                         <ReadingControl onSubmit={handleSubmit}></ReadingControl>
                     </div>
                 </div>
+
+                <Button onClick={handleShowAns} className={cx('show-ans-btn')}>
+                    {!showMbAns ? (
+                        <i class="fa-regular fa-rectangle-list"></i>
+                    ) : (
+                        <i class="fa-regular fa-file-lines"></i>
+                    )}
+                </Button>
             </div>
         </div>
     )

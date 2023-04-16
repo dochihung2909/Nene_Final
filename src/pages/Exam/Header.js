@@ -57,6 +57,17 @@ function Header() {
                         EngQ<span style={{ color: '#5A62B3' }}>uiz</span>
                     </h1>
                 </Link>
+
+                <div className={cx('test-name')}>
+                    <img
+                        src="https://suijm9clouobj.vcdn.cloud/PUBLIC/MEDIA/92e207d2-d08f-4916-b9d3-e3ab75cdf4c5.png"
+                        alt="english"
+                    />
+                    <div className={cx('test-title')}>
+                        <h4>CAM17 - Reading Test 1</h4>
+                        <p>The development of the London underground railway</p>
+                    </div>
+                </div>
             </div>
             <CountDown time={time}></CountDown>
 

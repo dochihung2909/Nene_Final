@@ -1,4 +1,6 @@
 .wrapper {
+    display: flex;
+    flex-direction: column;
     height: calc(100vh - var(--header-height));
 }
 
@@ -16,14 +18,15 @@
     & > span {
         position: absolute;
     }
+
+    & svg {
+        font-size: 1;
+    }
 }
 
 .greeting {
     width: 100%;
-    position: fixed;
     background-color: var(--P-color);
-    left: 0;
-    top: var(--header-height);
     padding: 40px;
     display: flex;
     gap: 30px;
@@ -45,24 +48,63 @@
 }
 
 .answer-key {
-    margin-top: calc(var(--header-height) + 176px);
     padding: 20px 0;
+    flex: 1;
 }
 
 .result-key {
     display: flex;
     align-items: center;
     gap: 5px;
+    width: 100%;
 }
 
 .answer-block {
+    display: flex;
     width: 25px;
     height: 25px;
     background-color: #ff991f;
-    border-radius: 99999px;
-    display: flex;
+    border-radius: 9999px;
     align-items: center;
     justify-content: center;
     margin: 12px 0;
     color: var(--white);
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    .back-home {
+        background-color: var(--P-color);
+        width: auto;
+        color: white;
+
+        & h4 {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .answer-key {
+    }
+
+    .greeting {
+        padding: 16px;
+
+        & h1 {
+            font-size: 2.6rem;
+        }
+        & p {
+            font-size: 1.6rem;
+        }
+
+        .score {
+            & span {
+                font-size: 2rem;
+            }
+        }
+    }
 }

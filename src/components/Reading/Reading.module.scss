@@ -258,9 +258,15 @@
 }
 
 @media (max-width: 768px) {
+    .wrapper {
+        padding: 20px 12px;
+    }
+
     .test-passage {
         flex-direction: column;
         width: auto;
+        justify-content: center;
+        align-items: center;
 
         .test-passage-info {
             & > h4 {
@@ -270,5 +276,15 @@
                 display: none;
             }
         }
+    }
+
+    .test-info {
+        .test-name {
+            display: none;
+        }
+    }
+
+    .test-ques-num {
+        display: none;
     }
 }

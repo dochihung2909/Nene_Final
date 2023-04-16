@@ -53,6 +53,7 @@
         display: flex;
         width: 40px;
         height: 40px;
+        border-radius: 9999px;
     }
 }
 
@@ -78,6 +79,57 @@
 
         &:hover {
             background-color: rgb(244, 244, 246);
+        }
+    }
+}
+
+.mobile-menu {
+    display: none;
+    width: auto;
+
+    & h4 {
+        font-size: 2rem;
+    }
+}
+
+.menu-nav {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .logo-wrapper {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .menu-nav {
+        position: fixed;
+        left: 0;
+        top: var(--header-height);
+        width: 100%;
+        padding: 20px;
+        border-radius: 0 0 16px 16px;
+        background-color: var(--white);
+        display: none;
+        flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 24px 32px, rgba(0, 0, 0, 0.04) 0px 16px 24px,
+            rgba(0, 0, 0, 0.04) 0px 4px 8px, rgba(0, 0, 0, 0.04) 0px 0px 1px;
+
+        .menu-nav-item {
+            gap: 10px;
+
+            justify-content: flex-start;
+
+            & h4 {
+                margin: 0;
+            }
+        }
+
+        &.show {
+            display: flex;
         }
     }
 }

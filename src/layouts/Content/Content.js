@@ -8,7 +8,8 @@ import styles from './Content.module.scss'
 import { Link } from 'react-router-dom'
 import HeadlessTippy from '@tippyjs/react/headless'
 import Quiz from '~/components/Quiz'
-import Study from '~/pages/Study/Study'
+import Study from '~/pages/Grammar/Grammar'
+import Grammar from '~/components/Grammar'
 
 const cx = classNames.bind(styles)
 
@@ -16,7 +17,7 @@ function Content({ profile, children }) {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('row')}>
-                <div className={cx('col-0', 'col-lg-1')}>
+                <div className={cx('col-0', 'col-md-1 col-lg-1')}>
                     <div className={cx('menu-wrapper')}>
                         <div className={cx('menu-item-wrapper')}>
                             <Link to="/" className={cx('menu-item', { selected: window.location.pathname === '/' })}>
@@ -43,7 +44,7 @@ function Content({ profile, children }) {
                         </div>
                     </div>
                 </div>
-                <div className={cx('body', 'col-12 col-lg-11')}>
+                <div className={cx('body', 'col-12 col-md-11     col-lg-11')}>
                     {!children ? (
                         <div className={cx('row')}>
                             <div className={cx('col-12')}>
@@ -130,25 +131,25 @@ function Content({ profile, children }) {
                                         <h4 className={cx('test-title')}>My Quiz</h4>
                                         <div className={cx('quizz')}>
                                             <div className={cx('row')}>
-                                                <div className={cx('col-3')}>
+                                                <div className={cx('col-6 col-lg-3')}>
                                                     <Quiz
                                                         thumb="https://f25-zpc.zdn.vn/5559362219638667843/078d6a13c2881ed64799.jpg"
                                                         title="Topic: Tecnology"
                                                     ></Quiz>
                                                 </div>
-                                                <div className={cx('col-3')}>
+                                                <div className={cx('col-6 col-lg-3')}>
                                                     <Quiz
                                                         thumb="https://f7-zpc.zdn.vn/142030376977776996/56e47fded445081b5154.jpg"
                                                         title="Topic: Movie"
                                                     ></Quiz>
                                                 </div>
-                                                <div className={cx('col-3')}>
+                                                <div className={cx('col-6 col-lg-3')}>
                                                     <Quiz
                                                         thumb="https://f19-zpc.zdn.vn/3836284697893531009/9b8931ef9a74462a1f65.jpg"
                                                         title="Topic: Travel"
                                                     ></Quiz>
                                                 </div>
-                                                <div className={cx('col-3')}>
+                                                <div className={cx('col-6 col-lg-3')}>
                                                     <Quiz
                                                         thumb="https://f4-zpc.zdn.vn/7307247825810508522/f02c7ba7d03c0c62552d.jpg"
                                                         title="Topic: Environments"
@@ -157,18 +158,32 @@ function Content({ profile, children }) {
                                             </div>
                                         </div>
                                     </div>
+                                    <div className={cx('test-wrapper')}>
+                                        <h4 className={cx('test-title')}>My Grammar</h4>
+                                        <div className={cx('quizz')}>
+                                            <div className={cx('row')}>
+                                                <div className={cx('col-12 ')}>
+                                                    <Grammar
+                                                        thumb="https://images.dolenglish.vn/rs:auto:::0/w:1440/q:30/aHR0cHM6Ly9zdWlqbTljbG91b2JqLnZjZG4uY2xvdWQvUFVCTElDL01FRElBLzE4NjZhNjhhLThhMmMtNGQwOS1iNDM0LTIwNDNlZTQ1MThiYy5qcGc="
+                                                        title="Cách dùng động từ “illustrate” tiếng Anh bạn nên biết"
+                                                        description='Trong bài thi IELTS, đặc biệt là Writing, động từ “illustrate” thường xuyên xuất hiện. Theo đó, trong tiếng Anh, động từ này cũng được sử dụng cho nhiều nghĩa khác nhau. Do đó, trong bài viết này, DOL English sẽ phân tích Cách dùng động từ"illustrate"tiếng Anh nhằm giúp bạn đọc nắm rõ và sử dụng từ vựng này hiệu quả hơn.'
+                                                    ></Grammar>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     ) : (
-                        <Study></Study>
+                        children
                     )}
                 </div>
             </div>
             <HeadlessTippy
                 interactive
                 trigger="click"
-                placement="left-start"
+                placement="top-start"
                 render={(attrs) => (
                     <div tabIndex="-1" {...attrs}>
                         <ChatBox className={cx('chat-box')}></ChatBox>

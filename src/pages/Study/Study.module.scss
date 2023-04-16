@@ -1,24 +1,50 @@
 .wrapper {
-    padding: 30px;
+    background-color: rgb(255, 249, 241);
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 48px;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+
     & h1 {
+        font-size: 4rem;
+        font-weight: 700;
         margin-bottom: 24px;
+        text-align: center;
+    }
+
+    & p {
+        text-align: center;
     }
 }
 
-.time {
-    width: 20%;
-}
-.recipe {
-    width: 40%;
+.badge {
+    position: absolute;
+    z-index: 0;
 }
 
-.usage {
-    width: 40%;
+.badge-1 {
+    top: 10%;
+    left: 0%;
 }
 
-table,
-td,
-th {
-    border: 1px solid #ccc;
-    padding: 8px;
+.badge-2 {
+    top: 30%;
+    right: 10%;
+}
+
+.badge-3 {
+    bottom: 10%;
+    left: 50%;
+}
+
+.grammar {
+    margin-bottom: 24px;
 }

@@ -8,7 +8,7 @@ import Button from '../Button'
 
 const cx = classNames.bind(styles)
 
-const API_KEY = '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'
+const API_KEY = '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'
 // "Explain things like you would to a 10 year old learning how to code."
 const systemMessage = {
     //  Explain things like you're talking to a software professional with 5 years of experience.

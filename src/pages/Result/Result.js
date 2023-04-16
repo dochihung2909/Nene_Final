@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind'
+import Button from '~/components/Button'
 import styles from './Result.module.scss'
 
 const cx = classNames.bind(styles)
@@ -17,13 +18,15 @@ function Result() {
         }
     })
 
-    console.log(point / result.length)
+    point = (point / result.length) * result.length
+
+    console.log(point)
 
     return (
         <div className={cx('wrapper')}>
             <div className={cx('greeting')}>
                 <div className={cx('score')}>
-                    <span>{(point / result.length) * result.length}</span>
+                    <span>{`${(point / result.length) * result.length}`}</span>
                     <svg class="ant-progress-circle" viewBox="0 0 100 100">
                         <path
                             class="ant-progress-circle-trail"
@@ -69,7 +72,7 @@ function Result() {
             <div className={cx('container', 'answer-key')}>
                 <div className="row">
                     <h4>Answer Keys</h4>
-                    <div className="col-6">
+                    <div className="col-12">
                         {result.map((res, index) => (
                             <div key={index} className={cx('result-key')}>
                                 <div className={cx('answer-block')}>{index + 1}</div>
@@ -79,6 +82,12 @@ function Result() {
                         ))}
                     </div>
                 </div>
+            </div>
+
+            <div className={cx('footer')}>
+                <Button to="/" className={cx('back-home')}>
+                    Về trang chủ
+                </Button>
             </div>
         </div>
     )

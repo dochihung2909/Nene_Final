@@ -6,6 +6,7 @@ import Content from './layouts/Content'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Result from './pages/Result/Result'
+import Grammar from './pages/Grammar/Grammar'
 import Study from './pages/Study/Study'
 
 function App() {
@@ -47,6 +48,15 @@ function App() {
                             <Content>
                                 <Study></Study>
                             </Content>
+                        </DefaultLayout>
+                    }
+                ></Route>
+
+                <Route
+                    path="/study/grammar"
+                    element={
+                        <DefaultLayout>
+                            <Grammar></Grammar>
                         </DefaultLayout>
                     }
                 ></Route>

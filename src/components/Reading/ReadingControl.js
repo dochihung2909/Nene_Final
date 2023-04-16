@@ -28,7 +28,7 @@ function ReadingControl({ onSubmit }) {
                         </div>
                     </div>
 
-                    {/* <div className={cx('test-passage')}>
+                    <div className={cx('test-passage')}>
                         <div className={cx('badge')}>0/13</div>
                         <div className={cx('test-passage-info')}>
                             <h4>PASSAGE 2</h4>
@@ -42,7 +42,7 @@ function ReadingControl({ onSubmit }) {
                             <h4>PASSAGE 3</h4>
                             <p>14 questions</p>
                         </div>
-                    </div> */}
+                    </div>
                 </div>
                 <div className={cx('test-navigate')}>
                     <Button

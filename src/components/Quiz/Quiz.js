@@ -6,7 +6,7 @@ const cx = classNames.bind(styles)
 
 function Quiz({ thumb, title }) {
     return (
-        <Link to="quiz" className={cx('wrapper')}>
+        <Link to="/" className={cx('wrapper')}>
             <div className={cx('thumb')}>
                 <img src={thumb} alt="thumb" />
             </div>
